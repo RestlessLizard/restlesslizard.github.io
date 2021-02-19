@@ -1,0 +1,163 @@
+/*V tomto súbore definujte vlastnosti štýlov pre všetky stránky vášho statického blogu pre zobrazenie na obrazovke.*/
+/*Please, define here the style for all the pages of your static blog for displaying on screen.*/
+
+:root {
+	--black: #001730;
+	--white: #fff;
+	--accent: #fe4a49;
+	--accent-alt: #4ad7d1;
+	font-family: Helvetica, sans-serif;
+	font-size: 1rem;
+}
+
+h1,
+h2,
+div,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+}
+
+nav {
+	font-size: 2.4rem;
+	position: fixed;
+	/* background-color: #00173090; */
+	background-color: var(--black);
+	color: white;
+	display: flex;
+	width: 100%;
+}
+
+nav > a {
+	padding: 0.7rem 1.2rem 0.5rem 1.2rem;
+	text-decoration: none;
+	color: inherit;
+	transition: color 150ms;
+}
+
+nav > a:hover {
+	color: var(--accent-alt);
+}
+
+.titleContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.title {
+	font-size: 4.5rem;
+	padding: 1em;
+	border-radius: 1em;
+	color: var(--white);
+	position: absolute;
+	top: 40%;
+	transform: translate(0, -40%);
+}
+
+.jumpArrow {
+	position: absolute;
+	margin: 0 auto;
+	bottom: 2%;
+
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	width: 100px;
+	transition: width 150ms;
+}
+
+.jumpArrow:hover {
+	width: 120px;
+}
+
+#backgroundImage {
+	background-image: url('../fig/home/minecraft-3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+#about {
+	height: 100vh;
+	padding-top: 5rem;
+	font-size: 2.5rem;
+	text-align: center;
+
+	display: flex;
+	justify-content: center;
+}
+
+.description {
+	font-size: 1.2rem;
+	max-width: 80ch;
+}
+
+#secondArrow {
+	bottom: -98%;
+}
+
+#articles {
+	background-color: var(--black);
+	color: var(--white);
+
+	list-style: none;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 4rem 1rem 0 1rem;
+}
+
+#articles > h2 {
+	font-size: 2.4rem;
+	text-align: center;
+	padding: 0.3em 0;
+	border-bottom: 2px solid var(--white);
+	border-top: 2px solid var(--white);
+	margin: 0 0 1em 0;
+}
+
+#articles ul {
+	list-style: none;
+}
+
+#articles li {
+	margin: 0 0 0.7em 0;
+}
+
+#articles a {
+	font-size: 1.4rem;
+	color: var(--white);
+	transition: color 150ms;
+}
+
+#articles a:hover {
+	color: var(--accent-alt);
+}
+
+#arrowUp {
+	bottom: -206%;
+	transform: translate(-50%, 0) scaleY(-1);
+}
