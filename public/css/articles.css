@@ -1,0 +1,171 @@
+:root {
+	--black: #001730;
+	--white: #fff;
+	--accent: #fe4a49;
+	--accent-alt: #4ad7d1;
+	font-family: Helvetica, sans-serif, monospace;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0 0 0 2rem;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.4rem;
+}
+
+nav {
+	z-index: 1;
+	font-size: 2em;
+	position: fixed;
+	background-color: var(--black);
+	color: white;
+	display: flex;
+	width: 100%;
+}
+
+nav > a {
+	padding: 0.7rem 1.2rem 0.5rem 1.2rem;
+	text-decoration: none;
+	color: inherit;
+	transition: color 150ms;
+}
+
+nav > a:hover {
+	color: var(--accent-alt);
+}
+
+#title {
+	padding: 1.2em 0 0.3em;
+	font-size: 3em;
+	text-align: center;
+}
+
+#content {
+	margin: 0 10%;
+}
+
+#article {
+	margin: 0 1rem 0 1rem;
+	display: grid;
+	grid-template-columns: 70% 30%;
+}
+
+#description {
+	text-align: justify;
+	grid-column: 1 / 3;
+	margin-bottom: 2rem;
+}
+
+#changes h3 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+#changes ul {
+	list-style: circle;
+	margin: 0 0 0 1rem;
+}
+
+#images {
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#imagesHeader {
+	margin-top: 1.5rem;
+	text-align: center;
+}
+
+#images img {
+	margin: 0.2rem 0.2rem;
+	max-width: 90vw;
+}
+
+#downloads {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+#downloads caption {
+	margin: 1rem 0;
+	font-size: 2rem;
+}
+
+#downloads table {
+	border: 2px solid var(--black);
+	border-spacing: 1.2rem;
+}
+
+#downloads thead {
+	padding: 10px;
+	font-weight: bold;
+}
+
+#downloads a {
+	text-decoration: underline;
+}
+
+#downloads tfoot {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+footer {
+	margin: 0 0 0 1rem;
+	padding: 0 0 2rem 0;
+	display: flex;
+	flex-direction: column;
+}
+
+footer * {
+	margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+	body {
+		font-size: 1.4rem;
+	}
+	#content {
+		margin: 0;
+	}
+
+	#downloads table {
+		border-spacing: 0.2rem;
+	}
+
+	#images picture {
+		height: auto;
+	}
+
+	#article {
+		display: initial;
+	}
+}
+
+@media (max-width: 460px) {
+	body {
+		font-size: 1.2rem;
+	}
+}
